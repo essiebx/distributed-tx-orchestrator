@@ -1,0 +1,10 @@
+[error] /home/essie/distributed-tx-orchestrator/core-orchestrator/src/main/scala/orchestrator/ApiServer.scala:29:7: Cannot prove that Throwable <:< zio.http.Response.
+[error]     ).toHttpApp
+[error]       ^
+[info] /home/essie/distributed-tx-orchestrator/core-orchestrator/src/main/scala/orchestrator/Database.scala:25:8: INSERT INTO saga_log (transaction_id,state,timestamp) VALUES (?, ?, ?)
+[info]     run(querySchema[SagaLogRow]("saga_log").insertValue(lift(row))).unit
+[info]        ^
+[info] /home/essie/distributed-tx-orchestrator/core-orchestrator/src/main/scala/orchestrator/Database.scala:28:8: SELECT x1.transaction_id AS transactionId, x1.state, x1.timestamp FROM saga_log x1 WHERE x1.transaction_id = ? ORDER BY x1.timestamp ASC
+[info]     run(querySchema[SagaLogRow]("saga_log").filter(_.transactionId == lift(transactionId)).sortBy(_.timestamp)(Ord.asc))
+[info]        ^
+[error] one error found

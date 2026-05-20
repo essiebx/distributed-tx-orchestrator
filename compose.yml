@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  redpanda:
+    image: redpandadata/redpanda:v23.2.14
+    command:
+      - redpanda
+      - start
+      - --smp 1
+      - --overprovisioned
+      - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
+      - --pandaproxy-addr internal://0.0.0.0:8082,external://0.0.0.0:18082
+      - --advertise-pandaproxy-addr internal://redpanda:8082,external://localhost:18082
+    ports:
+      - "19092:19092"
+      - "18082:18082"
+      - "9644:9644" # Admin API
+    volumes:
+      - redpanda_data:/var/lib/redpanda/data
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: saga_user
+      POSTGRES_PASSWORD: saga_password
+      POSTGRES_DB: saga_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  redpanda_data:
+  postgres_data:

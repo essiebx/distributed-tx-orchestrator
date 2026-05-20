@@ -1,0 +1,53 @@
+[debug] Created transactional ClassFileManager with tempDir = /home/essie/distributed-tx-orchestrator/shared-events/target/scala-2.13/classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Created transactional ClassFileManager with tempDir = /home/essie/distributed-tx-orchestrator/shared-events/target/scala-2.13/classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Registering generated classes:
+[debug] 	TransactionEvent$$anon$13.class
+[debug] 	ServiceCommand$$anon$19.class
+[debug] 	TransactionEvent$$anon$14.class
+[debug] 	SagaState.class
+[debug] 	SagaState$.class
+[debug] 	SagaState$Failed$.class
+[debug] 	SagaState$$anon$5.class
+[debug] 	TransactionEvent$$anon$16.class
+[debug] 	SagaState$StepSucceeded$.class
+[debug] 	ServiceCommand.class
+[debug] 	TransactionEvent$PaymentProcessed.class
+[debug] 	TransactionEvent$OrderStarted.class
+[debug] 	SagaState$$anon$8.class
+[debug] 	TransactionEvent$OrderCompensated$.class
+[debug] 	TransactionEvent$$anon$11.class
+[debug] 	TransactionEvent$$anon$15.class
+[debug] 	SagaState$$anon$6.class
+[debug] 	TransactionEvent.class
+[debug] 	ServiceCommand$.class
+[debug] 	TransactionEvent$PaymentProcessed$.class
+[debug] 	TransactionEvent$OrderCompensated.class
+[debug] 	ServiceCommand$$anon$21.class
+[debug] 	TransactionEvent$$anon$17.class
+[debug] 	TransactionEvent$OrderStarted$.class
+[debug] 	ServiceCommand$CompensateOrder$.class
+[debug] 	SagaState$Started$.class
+[debug] 	ServiceCommand$ProcessPayment$.class
+[debug] 	SagaState$$anon$10.class
+[debug] 	SagaState$$anon$7.class
+[debug] 	SagaState$$anon$2.class
+[debug] 	TransactionEvent$$anon$12.class
+[debug] 	TransactionEvent$PaymentFailed.class
+[debug] 	SagaState$Compensating$.class
+[debug] 	SagaState$Completed$.class
+[debug] 	ServiceCommand$CompensateOrder.class
+[debug] 	SagaState$$anon$3.class
+[debug] 	TransactionEvent$.class
+[debug] 	ServiceCommand$$anon$20.class
+[debug] 	SagaState$$anon$9.class
+[debug] 	ServiceCommand$ProcessPayment.class
+[debug] 	SagaState$$anon$1.class
+[debug] 	TransactionEvent$PaymentFailed$.class
+[debug] 	ServiceCommand$$anon$22.class
+[debug] 	TransactionEvent$$anon$18.class
+[debug] 	SagaState$$anon$4.class
+[debug] Removing the temporary directory used for backing up class files: /home/essie/distributed-tx-orchestrator/shared-events/target/scala-2.13/classes.bak

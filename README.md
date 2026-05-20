@@ -55,7 +55,7 @@ This project leverages type-safe, declarative functional programming patterns to
 
 ### Infrastructure (Free Developer Tiers)
 
-* **Local Engine**: Docker Compose, Redpanda (C++ drop-in Kafka alternative)
+* **Local Engine**: Podman Compose, Redpanda (C++ drop-in Kafka alternative)
 * **Cloud Hosting**: Render / Fly.io (Backend), Vercel (Frontend)
 * **Managed Services**: Upstash (Serverless Kafka), Supabase / Neon (Serverless PostgreSQL)
 
@@ -65,7 +65,7 @@ The codebase is organized as an SBT multi-module monorepo alongside an isolated 
 
 ```text
 ├── build.sbt                # Multi-module Scala compilation layout
-├── docker-compose.yml       # Development infrastructure (Redpanda, PostgreSQL)
+├── compose.yml              # Development infrastructure (Redpanda, PostgreSQL)
 ├── core-orchestrator/       # ZIO engine, Saga log database management, SSE streaming
 │   └── src/main/scala/
 ├── shared-events/           # Shared transactional event schemas (Scala 3 Enums)
@@ -80,7 +80,7 @@ The codebase is organized as an SBT multi-module monorepo alongside an isolated 
 
 ### Prerequisites
 
-* Docker and Docker Compose
+* Podman and Podman Compose
 * SBT (Scala Build Tool)
 * Node.js and npm (for the tracking dashboard)
 
@@ -89,7 +89,7 @@ The codebase is organized as an SBT multi-module monorepo alongside an isolated 
 Launch the lightweight message broker and persistence database:
 
 ```bash
-docker-compose up -d
+        podman-compose up -d
 ```
 
 ### Step 2: Run the Backend Orchestrator
